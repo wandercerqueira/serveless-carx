@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Soluction Items", "0 - Soluction Items", "{A9CD08BF-4F61-478D-91D6-6B0EFD01B890}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Layers", "1 - Layers", "{89E14670-B5A2-40EA-88B9-E4B8DD6BCC4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 - Presentation", "1.1 - Presentation", "{B6F6B512-4682-4BC7-B0FF-C9A7D4F70A33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 - Application", "1.2 - Application", "{081B6604-A2A5-490B-92F5-49FA9835E412}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadLicensePlates", "src\UploadLicensePlates\UploadLicensePlates.csproj", "{09363B4F-B285-4C04-B036-11AB87C9BC5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Service", "src\Application.Service\Application.Service.csproj", "{B9F1E03F-E0B6-4DBB-B542-DF430532F674}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "License Plates", "License Plates", "{18673B9A-5C57-4942-9E83-AEC5E952B9F5}"
+	ProjectSection(SolutionItems) = preProject
+		src\License Plates\bxplate2.jpg = src\License Plates\bxplate2.jpg
+		src\License Plates\DCMG1.jpg = src\License Plates\DCMG1.jpg
+		src\License Plates\hfdsio.jpg = src\License Plates\hfdsio.jpg
+		src\License Plates\jpthrls.jpg = src\License Plates\jpthrls.jpg
+		src\License Plates\mb300sl8911.jpg = src\License Plates\mb300sl8911.jpg
+		src\License Plates\rocky58.jpg = src\License Plates\rocky58.jpg
+		src\License Plates\TWAWSI.jpg = src\License Plates\TWAWSI.jpg
+		src\License Plates\us-1.jpg = src\License Plates\us-1.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CopyFrom", "CopyFrom", "{9BBDB93E-9EEE-4462-ADF2-EDC4EEE86D97}"
+	ProjectSection(SolutionItems) = preProject
+		src\License Plates\CopyFrom\bxplate2.jpg = src\License Plates\CopyFrom\bxplate2.jpg
+		src\License Plates\CopyFrom\jpthrls.jpg = src\License Plates\CopyFrom\jpthrls.jpg
+		src\License Plates\CopyFrom\kd.jpg = src\License Plates\CopyFrom\kd.jpg
+		src\License Plates\CopyFrom\mb300sl8911.jpg = src\License Plates\CopyFrom\mb300sl8911.jpg
+		src\License Plates\CopyFrom\us-1.jpg = src\License Plates\CopyFrom\us-1.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3 - Domain", "1.3 - Domain", "{1AD91CDB-2FB6-4ABC-9DB1-DCBE1AE30DC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Core", "src\Domain.Core\Domain.Core.csproj", "{521D45A9-712E-4305-B164-457A732E26F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09363B4F-B285-4C04-B036-11AB87C9BC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09363B4F-B285-4C04-B036-11AB87C9BC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09363B4F-B285-4C04-B036-11AB87C9BC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09363B4F-B285-4C04-B036-11AB87C9BC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F1E03F-E0B6-4DBB-B542-DF430532F674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F1E03F-E0B6-4DBB-B542-DF430532F674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F1E03F-E0B6-4DBB-B542-DF430532F674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F1E03F-E0B6-4DBB-B542-DF430532F674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521D45A9-712E-4305-B164-457A732E26F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521D45A9-712E-4305-B164-457A732E26F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521D45A9-712E-4305-B164-457A732E26F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521D45A9-712E-4305-B164-457A732E26F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B6F6B512-4682-4BC7-B0FF-C9A7D4F70A33} = {89E14670-B5A2-40EA-88B9-E4B8DD6BCC4A}
+		{081B6604-A2A5-490B-92F5-49FA9835E412} = {89E14670-B5A2-40EA-88B9-E4B8DD6BCC4A}
+		{09363B4F-B285-4C04-B036-11AB87C9BC5B} = {B6F6B512-4682-4BC7-B0FF-C9A7D4F70A33}
+		{B9F1E03F-E0B6-4DBB-B542-DF430532F674} = {081B6604-A2A5-490B-92F5-49FA9835E412}
+		{18673B9A-5C57-4942-9E83-AEC5E952B9F5} = {A9CD08BF-4F61-478D-91D6-6B0EFD01B890}
+		{9BBDB93E-9EEE-4462-ADF2-EDC4EEE86D97} = {18673B9A-5C57-4942-9E83-AEC5E952B9F5}
+		{1AD91CDB-2FB6-4ABC-9DB1-DCBE1AE30DC9} = {89E14670-B5A2-40EA-88B9-E4B8DD6BCC4A}
+		{521D45A9-712E-4305-B164-457A732E26F9} = {1AD91CDB-2FB6-4ABC-9DB1-DCBE1AE30DC9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2215933D-F16B-4AF6-B374-EECFF2D3DB30}
+	EndGlobalSection
+EndGlobal
