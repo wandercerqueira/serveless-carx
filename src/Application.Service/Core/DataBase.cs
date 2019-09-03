@@ -10,13 +10,14 @@
 
     public sealed class DataBase
     {
+        private DocumentClient _client;
+
         private readonly string _endpointUrl = Environment.GetEnvironmentVariable("cosmosDBEndPointUrl");
         private readonly string _authorizationKey = Environment.GetEnvironmentVariable("cosmosDBAuthorizationKey");
         private readonly string _databaseId = Environment.GetEnvironmentVariable("cosmosDBDatabaseId");
         private readonly string _collectionId = Environment.GetEnvironmentVariable("cosmosDBCollectionId");
 
         private readonly ILogger _log;
-        private DocumentClient _client;
 
         public DataBase(ILogger log)
         {
@@ -57,7 +58,7 @@
             
             foreach (var licensePlate in licensePlates)
             {
-                licensePlate.Exported = true;
+                licensePlate.exported = true;
                 var response = await _client.ReplaceDocumentAsync(UriFactory.CreateDocumentUri(_databaseId, _collectionId, licensePlate.Id), licensePlate);
 
                 var updated = response.Resource;
