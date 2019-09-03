@@ -5,14 +5,14 @@
 
     public class PlateDataDocumentLicense : Resource
     {
-        public string FileName { get; set; }
+        public string fileName { get; set; }
 
-        public string PlateText { get; set; }
+        public string plateText { get; set; }
 
-        public DateTime TimeStamp { get; set; }
+        public DateTime timeStamp { get; set; }
 
-        public bool PlateFound { get; set; }
+        public bool plateFound { get; set; }
 
-        public bool Exported { get; set; }
+        public bool exported { get; set; }
     }
 }
