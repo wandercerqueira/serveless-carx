@@ -55,14 +55,15 @@
         public async Task MarkLicensePlatesAsExported(IEnumerable<PlateDataDocumentLicense> licensePlates)
         {
             _log.LogInformation("Updating license plate documents exported values to true");
-            
+            var collectionLink = UriFactory.CreateDocumentCollectionUri(_databaseId, _collectionId);
+
             foreach (var licensePlate in licensePlates)
             {
                 licensePlate.exported = true;
                 var response = await _client.ReplaceDocumentAsync(UriFactory.CreateDocumentUri(_databaseId, _collectionId, licensePlate.Id), licensePlate);
 
                 var updated = response.Resource;
-                _log.LogInformation($"Exported value of updated document: {updated.GetPropertyValue<bool>("exported")}");
+                //_log.LogInformation($"Exported value of updated document: {updated.GetPropertyValue<bool>("exported")}");
             }            
         }
     }
