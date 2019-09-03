@@ -41,7 +41,7 @@
                 .ToList();
 
             // TODO 6: Remove the line below.
-            licensePlates = new List<PlateDataDocumentLicense>();
+            // licensePlates = new List<PlateDataDocumentLicense>();
           
             exportedCount = licensePlates.Count();
             _log.LogInformation($"{exportedCount} license plates found that are ready for export");
