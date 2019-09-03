@@ -74,9 +74,9 @@
         {
             return new PlateDataLicense
             {
-                FileName = source.FileName,
-                PlateText = source.PlateText,
-                TimeStamp = source.Timestamp
+                FileName = source.fileName,
+                PlateText = source.plateText,
+                TimeStamp = source.timeStamp
             };
         }
     }
