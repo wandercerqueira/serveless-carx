@@ -45,6 +45,8 @@
                     await textWriter.FlushAsync();
 
                     _log.LogInformation($"Beginning file upload: {blobName}");
+                    _log.LogInformation($"{_blobStorageConnection}");
+                    
                     try
                     {
                         var container = _blobClient.GetContainerReference(_containerName);
