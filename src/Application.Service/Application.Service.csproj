@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
-    <DisableFunctionExtensionVersionUpdate>true</DisableFunctionExtensionVersionUpdate>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="12.1.2" />
