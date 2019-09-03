@@ -41,7 +41,6 @@
                 {
                     csv.Configuration.Delimiter = ",";
                     csv.WriteRecords(plates.Select(ToPlateDataLicense));
-
                     await textWriter.FlushAsync();
 
                     _log.LogInformation($"Beginning file upload: {blobName}");
@@ -54,8 +53,7 @@
 
                         await container.CreateIfNotExistsAsync();
                                                 
-                        stream.Position = 0;
-                        
+                        stream.Position = 0;                        
                         // TODO 7: Asyncronously upload the blob from the memory stream.
                         await blob.UploadFromStreamAsync(stream);
 

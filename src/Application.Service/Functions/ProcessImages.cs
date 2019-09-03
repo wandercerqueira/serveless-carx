@@ -61,8 +61,6 @@
             log.LogInformation($"Finished processing. Detected the following license plate: {plateText}");
         }       
 
-        //private static HttpClient _client;
-
         private static string GetBlobNameFromUrl(string bloblUrl)
         {
             var uri = new Uri(bloblUrl);
