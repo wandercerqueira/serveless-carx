@@ -20,8 +20,6 @@
             [Blob(blobPath: "{data.url}", access: FileAccess.Read, Connection = "blobStorageConnection")] Stream incomingPlate, ILogger log)
         {
             var plateText = string.Empty;
-
-            //_client = _client ?? new HttpClient();
             var _client = new HttpClient();
 
             try
@@ -41,6 +39,7 @@
                     }
 
                     // TODO 1: Set the licensePlateText value by awaiting a new FindLicensePlateText.GetLicensePlate method.
+                    plateText = await new FindLicensePlateText(log, _client).GetLicensePlate(plateImage);
 
                     // Send the details to Event Grid.
                     await new SendToEventGrid(log, _client).SendLicensePlateData(new PlateDataLicense()

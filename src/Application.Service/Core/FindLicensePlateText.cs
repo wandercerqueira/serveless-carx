@@ -19,8 +19,8 @@
 
         // Get the API URL and the API key from settings.
         // TODO 2: Populate the below two variables with the correct AppSettings properties.
-        private readonly string _uriBase = Environment.GetEnvironmentVariable("");
-        private readonly string _apiKey = Environment.GetEnvironmentVariable("");        
+        private readonly string _uriBase = Environment.GetEnvironmentVariable("computerVisionApiUrl");
+        private readonly string _apiKey = Environment.GetEnvironmentVariable("computerVisionApiKey");        
 
         private readonly ILogger _log;
         private readonly HttpClient _client;

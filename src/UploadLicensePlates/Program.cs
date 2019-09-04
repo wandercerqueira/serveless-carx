@@ -99,8 +99,7 @@
               .Select(s => s[Random.Next(s.Length)]).ToArray());
             return $"{rando}.jpg";
         }
-
-
+        
         private static void LoadImagesFromDisk(bool upload1000)
         {
             if (upload1000)
