@@ -24,12 +24,10 @@
 
         public async Task SendLicensePlateData(PlateDataLicense data)
         {
-            if (data.PlateFound)
-                // TODO 3: Modify send method to include the proper eventType name value for saving plate data.
-                await Send("savePlateData", "TollBooth/CustomerService", data);
-            else
-                // TODO 4: Modify send method to include the proper eventType name value for queuing plate for manual review.
-                await Send("queuePlateForManualCheckup", "TollBooth/CustomerService", data);            
+            //if (data.PlateFound)
+            // TODO 3: Modify send method to include the proper eventType name value for saving plate data.               
+            // else
+            // TODO 4: Modify send method to include the proper eventType name value for queuing plate for manual review.                          
         }
 
         private async Task Send(string eventType, string subject, PlateDataLicense data)

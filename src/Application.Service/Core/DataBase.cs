@@ -37,14 +37,14 @@
             {
                 // MaxItemCount value tells the document query to retrieve 100 documents at a time until all are returned.
                 // TODO 5: Retrieve a List of LicensePlateDataDocument objects from the collectionLink where the exported value is false.
-                licensePlates = _client.CreateDocumentQuery<PlateDataDocumentLicense>(collectionLink,
-                new FeedOptions() { EnableCrossPartitionQuery = true, MaxItemCount = 100 })
-                .Where(l => l.exported == false)
-                .ToList();
+                //licensePlates = _client.CreateDocumentQuery<PlateDataDocumentLicense>(collectionLink,
+                //new FeedOptions() { EnableCrossPartitionQuery = true, MaxItemCount = 100 })
+                //.Where(l => l.exported == false)
+                //.ToList();
             }
 
             // TODO 6: Remove the line below.
-            // licensePlates = new List<PlateDataDocumentLicense>();
+             licensePlates = new List<PlateDataDocumentLicense>();
 
             exportedCount = licensePlates.Count();
             _log.LogInformation($"{exportedCount} license plates found that are ready for export");
@@ -55,16 +55,17 @@
         public async Task MarkLicensePlatesAsExported(IEnumerable<PlateDataDocumentLicense> licensePlates)
         {
             _log.LogInformation("Updating license plate documents exported values to true");
-            var collectionLink = UriFactory.CreateDocumentCollectionUri(_databaseId, _collectionId);
 
-            foreach (var licensePlate in licensePlates)
+            using (_client = new DocumentClient(new Uri(_endpointUrl), _authorizationKey))
             {
-                licensePlate.exported = true;
-                var response = await _client.ReplaceDocumentAsync(UriFactory.CreateDocumentUri(_databaseId, _collectionId, licensePlate.Id), licensePlate);
+                foreach (var licensePlate in licensePlates)
+                {
+                    licensePlate.exported = true;
+                    var response = await _client.ReplaceDocumentAsync(UriFactory.CreateDocumentUri(_databaseId, _collectionId, licensePlate.Id), licensePlate);
 
-                var updated = response.Resource;
-                //_log.LogInformation($"Exported value of updated document: {updated.GetPropertyValue<bool>("exported")}");
-            }            
+                    var updated = response.Resource;
+                }
+            }
         }
     }
 }

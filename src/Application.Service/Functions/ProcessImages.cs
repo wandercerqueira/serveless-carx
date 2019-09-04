@@ -41,7 +41,6 @@
                     }
 
                     // TODO 1: Set the licensePlateText value by awaiting a new FindLicensePlateText.GetLicensePlate method.
-                    plateText = await new FindLicensePlateText(log, _client).GetLicensePlate(plateImage);
 
                     // Send the details to Event Grid.
                     await new SendToEventGrid(log, _client).SendLicensePlateData(new PlateDataLicense()

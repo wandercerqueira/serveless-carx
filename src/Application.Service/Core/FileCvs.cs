@@ -44,8 +44,7 @@
                     await textWriter.FlushAsync();
 
                     _log.LogInformation($"Beginning file upload: {blobName}");
-                    _log.LogInformation($"{_blobStorageConnection}");
-                    
+
                     try
                     {
                         var container = _blobClient.GetContainerReference(_containerName);
@@ -55,9 +54,10 @@
                                                 
                         stream.Position = 0;                        
                         // TODO 7: Asyncronously upload the blob from the memory stream.
-                        await blob.UploadFromStreamAsync(stream);
 
                         successful = true;
+
+                        _log.LogInformation("Upload Successfully");
                     }
                     catch (Exception e)
                     {
